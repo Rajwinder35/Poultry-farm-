@@ -3,6 +3,8 @@ import Image from "next/image";
 import { prisma } from "@/lib/db";
 import { formatPriceRange } from "@/lib/utils";
 
+export const dynamic = "force-dynamic";
+
 export default async function HomePage() {
   const product = await prisma.product.findFirst({
     include: { images: true },

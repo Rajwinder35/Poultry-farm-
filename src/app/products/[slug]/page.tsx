@@ -4,6 +4,8 @@ import { prisma } from "@/lib/db";
 import { formatPriceRange } from "@/lib/utils";
 import OrderForm from "@/components/OrderForm";
 
+export const dynamic = "force-dynamic";
+
 export async function generateMetadata({ params }: { params: { slug: string } }) {
   const product = await prisma.product.findUnique({
     where: { slug: params.slug },

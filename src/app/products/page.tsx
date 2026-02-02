@@ -3,6 +3,8 @@ import Image from "next/image";
 import { prisma } from "@/lib/db";
 import { formatPriceRange } from "@/lib/utils";
 
+export const dynamic = "force-dynamic";
+
 export const metadata = {
   title: "Products | Chahal Farm",
   description: "View our live hens for retail and bulk orders.",

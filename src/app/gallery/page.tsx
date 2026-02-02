@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { prisma } from "@/lib/db";
 
+export const dynamic = "force-dynamic";
+
 export const metadata = {
   title: "Gallery | Chahal Farm",
   description: "Farm, hens, and handling gallery.",
