@@ -1,0 +1,85 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum InquiryType {
+  CONTACT
+  ORDER
+}
+
+enum InquiryStatus {
+  NEW
+  RESOLVED
+}
+
+enum OrderType {
+  RETAIL
+  BULK
+}
+
+enum DeliveryPreference {
+  PICKUP
+  DELIVERY
+}
+
+enum ProductUnit {
+  PER_BIRD
+  PER_KG
+}
+
+model AdminUser {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  passwordHash String
+  createdAt    DateTime @default(now())
+}
+
+model Product {
+  id          String         @id @default(cuid())
+  name        String
+  slug        String         @unique
+  description String
+  priceMin    Int
+  priceMax    Int
+  unit        ProductUnit
+  inStock     Boolean        @default(true)
+  images      ProductImage[]
+  createdAt   DateTime       @default(now())
+}
+
+model ProductImage {
+  id        String   @id @default(cuid())
+  product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  productId String
+  imageUrl  String
+  createdAt DateTime @default(now())
+}
+
+model GalleryImage {
+  id        String   @id @default(cuid())
+  title     String
+  category  String
+  imageUrl  String   @unique
+  createdAt DateTime @default(now())
+}
+
+model Inquiry {
+  id                 String              @id @default(cuid())
+  type               InquiryType
+  name               String
+  phone              String
+  email              String?
+  message            String
+  orderType          OrderType?
+  quantity           String?
+  deliveryPreference DeliveryPreference?
+  preferredDate      String?
+  status             InquiryStatus       @default(NEW)
+  internalNote       String?
+  createdAt          DateTime            @default(now())
+}

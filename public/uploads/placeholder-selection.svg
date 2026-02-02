@@ -1,0 +1,7 @@
+<svg width="640" height="420" viewBox="0 0 640 420" xmlns="http://www.w3.org/2000/svg">
+  <rect width="640" height="420" fill="#f6fbf6" />
+  <circle cx="200" cy="210" r="70" fill="#6bb97d" />
+  <circle cx="320" cy="210" r="70" fill="#9fd3a4" />
+  <circle cx="440" cy="210" r="70" fill="#c7e6c8" />
+  <text x="40" y="380" font-family="Arial" font-size="24" fill="#1c402a">Sorted healthy hens</text>
+</svg>

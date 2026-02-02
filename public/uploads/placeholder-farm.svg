@@ -1,0 +1,8 @@
+<svg width="640" height="420" viewBox="0 0 640 420" xmlns="http://www.w3.org/2000/svg">
+  <rect width="640" height="420" fill="#e7f5e7" />
+  <rect y="260" width="640" height="160" fill="#9fd3a4" />
+  <circle cx="120" cy="100" r="50" fill="#ffd166" />
+  <rect x="380" y="170" width="160" height="120" fill="#459b5d" />
+  <rect x="410" y="200" width="60" height="60" fill="#e7f5e7" />
+  <text x="40" y="380" font-family="Arial" font-size="24" fill="#1c402a">Chahal Farm - Clean Farm Area</text>
+</svg>
