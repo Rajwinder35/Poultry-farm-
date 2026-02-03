@@ -1,0 +1,8 @@
+<svg width="640" height="420" viewBox="0 0 640 420" xmlns="http://www.w3.org/2000/svg">
+  <rect width="640" height="420" fill="#f6fbf6" />
+  <ellipse cx="220" cy="220" rx="120" ry="70" fill="#9fd3a4" />
+  <ellipse cx="420" cy="230" rx="120" ry="70" fill="#c7e6c8" />
+  <circle cx="180" cy="200" r="18" fill="#1c402a" />
+  <circle cx="380" cy="210" r="18" fill="#1c402a" />
+  <text x="40" y="380" font-family="Arial" font-size="24" fill="#1c402a">Healthy hens ready for sale</text>
+</svg>
